@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.8.0/suncalc.min.js"></script>
+
+</head>
+<body>
+    <div id="card">
+      <img id="add" src="outline_add_black_24dp.png">
+      <img id="sun" src="outline_light_mode_black_24dp.png"> 
+      <img id="slider" src="icons8-slider-16.png">
+      <p ID="text">C°  F°</p>
+      <p id="sunset"></p>
+      <p id="sunrise"></p>
+
+      <h1>
+           < 27° >
+        </h1>
+        
+        <H5 id="word">Sunny</H5>
+        <div id="card1">
+            <h3>Welcome Back Isabella!</h3>
+            <img src="aa.png">
+            <img src="81392.png" id="img2">
+            <h5>Check out today's weather information</h5>
+       <div id="card2">
+        <div>
+        <h4>Upcoming hours
+        <select id="one"><option value="rain">Rain precipitation</option></select>
+        <select id="two"><option>Next days</option></select></h4>
+    </div>
+    <br>
+    <br>
+    <h6 id="four"> Now   11:00  12:00  13:00  14:00  15:00  16:00  17:00  18:00  19:00  20:00  21:00  22:00</h6>
+   <h6 id="three"> 27°   28°    28°      29°     30°     29°    29°    29°    28°    29°    27°    26°    25°</h6>
+    <div id="graphContainer">
+        <canvas id="myChart" style="width: 100%;height:100%;"></canvas>    
+        </div>
+
+       </div>
+       <h5>More details of today's weather</h5>
+       <div id="card3">
+        <h4>Humidity
+            <img src="water-droplet.png" id="icon">
+            <h3 id ="hello2">82%</h3>
+            <H6 id="hello3"> good normal bad</H6>
+        </h4>
+        
+        <div id="myProgress21">
+            <div id="myBar21">
+            </div></div>
+          <div id="myProgress22">
+            <div id="myBar22">
+            </div></div>
+          <div id="myProgress23">
+            <div id="myBar23">
+            </div></div>
+        <div id="card4">
+            <h4>Wind
+                <img src="wind.png"id="icon">
+            </h4>  
+            <img src="speedometer.png"  id="img1">     
+            <div id="card5">
+                <h4>Precipitation
+                    <img src="raining.png" id="icon">
+                    <p id="hello">1.4 cm</p>
+                    <p id="hello1">0 10 20 30 40 50 60 70 80 90</p>
+                </h4>
+                
+                <div id="myProgress10">
+                    <div id="myBar10">
+                    </div></div>
+                  <div id="myProgress11">
+                    <div id="myBar11">
+                    </div></div>
+                  <div id="myProgress12">
+                    <div id="myBar12">
+                    </div></div>
+                  <div id="myProgress13">
+                    <div id="myBar13">
+                    </div></div>
+                  <div id="myProgress14">
+                    <div id="myBar14">
+                    </div></div>
+                    <div id="myProgress15">
+                    <div id="myBar15">
+                    </div></div>
+                    <div id="myProgress16">
+                    <div id="myBar16">
+                    </div></div>
+                    <div id="myProgress17">
+                    <div id="myBar17">
+                    </div></div>
+                    <div id="myProgress18">
+                    <div id="myBar18">
+                    </div></div>
+                    <div id="myProgress19">
+                    <div id="myBar19">
+                  </div></div>
+                  
+            </div>   
+        </div>   
+       </div>
+       <div id="card6">
+        <h4>UV index
+            <img src="sun.png"id="icon">
+        </h4>
+        <h3 id="temp3"> 4 medium </h3>
+        <h6 id ="temp-1">0-2 3-5 6-7 8-10 11+</h6>
+        <div id="myProgress0">
+            <div id="myBar0">
+            </div></div>
+          <div id="myProgress1">
+            <div id="myBar1">
+            </div></div>
+          <div id="myProgress2">
+            <div id="myBar2">
+            </div></div>
+          <div id="myProgress3">
+            <div id="myBar3">
+            </div></div>
+          <div id="myProgress4">
+            <div id="myBar4">
+          </div></div>
+          
+        <div id="card7">
+            <h4>Feels like
+                <img src="hot.png"id="icon">
+                <h3 id="temp"> 30° </h3>
+                <h6 id ="temp-1">0° 25° 50° 75° 100°</h6>
+            </h4>
+            <div class="progress">  
+                <div class="progress-bar" id="myProgressBar">
+
+                </div>   
+                </div>
+                    <div id="card8">
+                <h4>Chance of rain
+                    <img src="rainy.png"id="icon">
+                    <h3 id="temp"> 42% </h3>
+                    <h6 id ="temp-2">0% 25% 50% 75% 100%</h6>
+                </h4>
+                <div class="progress1">  
+                    <div class="progress-bar1" id="myProgressBar1">
+    
+                    </div>   
+                    </div>
+            </div>
+            
+        </div>
+       </div>        
+    </div>
+    </div>
+  <style>
+    #add{
+     margin-left: 10px;
+     margin-top: 73px;
+      width: 3%;
+
+    }
+    #text{
+      position: relative;
+      left:163px;
+      top:13px;
+      word-spacing: 33px;
+    }
+    #slider{
+      margin-left: 183px;
+     margin-top: 80px;
+      width: 30px;
+    }
+    #sun{
+    position: relative;
+    right: 600px;
+    top: 403px;
+    }
+    #word{
+      position:relative;
+      left:90px;
+      bottom: 20px;
+      font-size: large;
+    }
+    #sunset{
+      position: relative;
+      top:65px;
+      left: 20px;
+    }
+    #sunrise{
+      position: relative;
+      top: 75px;
+      left: 20px;
+    
+    }
+#img1{
+    width: 180px;
+    height: 75px;
+position: relative;
+right: 643px;
+bottom:-9px;
+margin-top: 5px;
+    border-radius: 20px;
+}
+        #hello2{
+            text-align: center;
+            position: relative;
+            top: 25px;
+        }
+        #hello3{
+            word-spacing: 25px;
+            margin-top: 35px;
+            margin-left: 40px;
+            margin-bottom: 25px;
+        }
+        #myProgress21{
+  width: 20%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+  position:relative;
+  top:-10px;
+  left:29px;
+  
+  
+}
+
+#myBar21 {
+  width: 1%;
+  height: 15px;
+  background-color:#007bff;
+  border-radius:30px;
+white-space: nowrap;
+}
+#myProgress22{
+  width: 22%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+position:relative;
+left:85px;
+bottom:15px;
+top:-25px;
+}
+
+#myBar22 {
+  width: 1%;
+  height: 15px;
+  background-color: #007bff;
+  border-radius:30px;
+white-space: nowrap;
+}#myProgress23{
+  width: 22%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+  position:relative;
+left:150px;
+bottom:30px;
+top:-40px;
+}
+
+#myBar23 {
+  width: 1%;
+  height: 15px;
+  background-color: #007bff;
+  border-radius:30px;
+white-space: nowrap;
+}
+        #hello{
+            position: relative;
+            bottom:35px;
+            left:75px;
+            font-size: large;
+            
+        }
+#hello1{
+    position: relative;
+    left: 5px;
+    bottom: 42px;
+    word-spacing: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+}
+        #myProgress10{
+  width: 5%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+  position:relative;
+  top:80px;
+  margin-left: 25px;
+}
+
+#myBar10 {
+  width: 1%;
+  height: 15px;
+  background-color: #007bff;
+  border-radius:30px;
+white-space: nowrap;
+}
+#myProgress11{
+  width: 5%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+position:relative;
+left:45px;
+bottom:15px;
+top:65px;
+}
+
+#myBar11 {
+  width: 1%;
+  height: 15px;
+  background-color: #007bff;
+  border-radius:30px;
+white-space: nowrap;
+}#myProgress12{
+  width: 5%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+  position:relative;
+left:67px;
+bottom:30px;
+top: 51px;
+}
+
+#myBar12 {
+  width: 1%;
+  height: 15px;
+  border-radius:30px;
+white-space: nowrap;
+}#myProgress13{
+  width: 5%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+position:relative;
+left:90px;
+bottom:45px;
+top:36px;
+}
+
+#myBar13 {
+  width: 1%;
+  height: 15px;
+  border-radius:30px;
+white-space: nowrap;
+}#myProgress14{
+  width: 5%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+position:relative;
+left:110px;
+bottom:60px;
+top:21px
+}
+
+#myBar14 {
+  width: 1%;
+  height: 15px;
+  
+  border-radius:30px;
+white-space: nowrap;
+}
+#myProgress15{
+  width: 5%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+position:relative;
+left:130px;
+bottom:75px;
+top:7px
+}
+
+#myBar15 {
+  width: 1%;
+  height: 15px;
+
+  border-radius:30px;
+white-space: nowrap;
+}
+#myProgress16{
+  width: 5%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+position:relative;
+left:150px;
+bottom:90px;
+top:-8px;
+}
+
+#myBar16 {
+  width: 1%;
+  height: 15px;
+  border-radius:30px;
+white-space: nowrap;
+}
+#myProgress17{
+  width: 5%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+position:relative;
+left:171px;
+bottom:105px;
+top:-23px;
+}
+
+#myBar17 {
+  width: 1%;
+  height: 15px;
+  border-radius:30px;
+white-space: nowrap;
+}
+#myProgress18{
+  width: 5%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+position:relative;
+left:193px;
+bottom:120px;
+top:-38px;
+}
+
+#myBar18 {
+  width: 1%;
+  height: 15px;
+  border-radius:30px;
+white-space: nowrap;
+}
+#myProgress19{
+  width: 5%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+position:relative;
+left:212px;
+bottom:133px;
+top:-53px;
+}
+
+#myBar19 {
+  width: 1%;
+  height: 15px;
+  border-radius:30px;
+white-space: nowrap;
+}
+        #temp3{
+            text-align: center;
+            position: relative;
+            top:35px;
+        }
+    #myProgress0 {
+  width: 9%;
+  background-color: #ddd;;
+  border-radius:30px;
+  white-space: nowrap;
+  position: relative;
+  left:25px;
+  bottom: 3px;
+
+}
+
+#myBar0 {
+  width: 1%;
+  height: 15px;
+  background-color: #007bff;
+  border-radius:30px;
+white-space: nowrap;
+}
+#myProgress1 {
+  width: 10%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+position:relative;
+left:60px;
+bottom: 18px;
+}
+
+#myBar1 {
+  width: 1%;
+  height: 15px;
+  background-color: #007bff;
+  border-radius:30px;
+white-space: nowrap;
+}#myProgress2 {
+  width: 10%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+  position:relative;
+left:98px;
+bottom:33px ;
+transition: width 0.3s;
+}
+
+#myBar2 {
+  width: 1%;
+  height: 15px;
+  border-radius:30px;
+white-space: nowrap;
+transition: width 0.3s;
+}#myProgress3 {
+  width: 10%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+position:relative;
+left:140px;
+bottom:48px;
+transition: width 0.3s;
+}
+
+#myBar3 {
+  width: 1%;
+  height: 15px;
+  border-radius:30px;
+white-space: nowrap;
+transition: width 0.3s;
+}#myProgress4 {
+  width: 10%;
+  background-color: #ddd;
+  border-radius:30px;
+  white-space: nowrap;
+position:relative;
+left:180px;
+bottom:65px;
+transition: width 0.3s;
+}
+
+#myBar4 {
+  width: 1%;
+  height: 15px;
+  border-radius:30px;
+white-space: nowrap;
+transition: width 0.3s;
+}
+        #temp-2{
+            position: relative;
+            top:15px;
+            word-spacing: 20px;
+            left:18px;
+        }
+        #temp-1{
+            position: relative;
+            top:12px;
+            left: 30px;
+            word-spacing: 20px;
+        
+        }
+        #temp{
+            margin-left: 100px;
+            position: relative;
+            top:32px;
+        }
+        
+.progress {
+  width: 70%;
+  height: 12px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  position: relative;
+  bottom: 10px;
+  left: 30px;
+  top: 1px;
+  transition: width 0.3s;
+}
+.progress1 {
+  width: 90%;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  position: relative;
+  left: 16px;
+  top: 1px;
+  transition: width 0.3s;
+
+}
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #007bff;
+  border-radius: 15px;
+  transition: width 0.3s; 
+}
+.progress-bar1 {
+  height: 100%;
+  width: 0;
+  background-color: #007bff;
+  border-radius: 15px;
+  transition: width 0.3s; }
+
+        #left{
+            width: 20px;
+             position: relative;
+             right:550px;
+             margin-right: 5px;
+
+        }
+        #right{
+            width: 20px;
+             position: relative;
+             right:550px;
+        }
+        h1{
+        word-spacing: 35px;
+        margin-top: 200px;
+        margin-left: 10px;
+        font-size: 50px;
+
+        }
+        #icon{
+            width:20px;
+            position: relative;
+            right: 500px;
+            top:-15px;
+        }
+        #four{
+            margin-top: 5px;
+            word-spacing: 25px;
+            margin-left: 13px;
+        }
+        #three{
+            margin-top: 6px;
+            margin-left: 13px;
+            word-spacing: 38px;
+        }
+        #graphContainer{
+            margin-top: 10px;
+            height: 90px;
+        }
+        #one{
+            margin-left: 310px;
+            border-radius: 10px;
+            padding: 3px;
+        }
+        #two{
+            border-radius: 10px;
+            padding: 3px;
+        }
+        h4{
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+        h3,h5{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            background-color: rgb(142, 183, 230);
+        }
+        #img2{
+            position: absolute;
+            top: 25px;
+            width: 5%;
+            margin-left: 720px; 
+        }
+        
+        img{
+            position: absolute;
+            top: 25px;
+            margin-left: 660px;
+        }
+        #button1
+        {
+            margin-left: 340px;
+        }
+        #card {
+                padding: 2px 16px;
+                width: 500px;
+      height: 648px;
+      border: 1px 1px 1px 1px solid;
+      padding: 5px;
+      margin-left: 210px;
+      background-image: url("empire-state-building-joe-bergholm.jpg");    
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      border-radius: 60px;
+     align-content: center;
+    border-top: 10px black;
+     margin-top: 50px;
+     margin-bottom: 50px;
+    }
+    #card1
+    {
+        
+    position:absolute;
+    padding: 2px 16px;
+    width: 800px;
+    height: 630px;
+    border: 1px 1px 1px 1px solid;
+    padding: 15px;
+    background-color: rgb(192, 219, 241);
+    border-radius: 60px;
+    margin-left: 240px;
+    top: 0;
+    margin-top: 49px;
+    }  
+#card2
+    {
+        background-color: whitesmoke;
+        width: 720px;
+        height: 200px;
+        border: 1px 1px 1px 1px solid;
+        padding: 15px;
+        margin-left: 50px;
+        border-radius: 30px;
+    } 
+    #card3
+    {
+        width: 230px;
+        height: 110px; 
+        border: 1px 1px 1px 1px solid;
+        margin-left: 50px;
+        border-radius: 30px;
+        background-color: whitesmoke;
+        
+    }
+    #card4
+    {
+        width: 230px;
+        height: 110px; 
+        border: 1px 1px 1px 1px solid;
+        margin-left: 250px;
+        border-radius: 30px;
+        background-color: whitesmoke;
+        margin-bottom: 5px;
+        position: relative;
+        bottom: 140px;
+    }
+    #card5
+    {
+        width: 230px;
+        height: 110px; 
+        border: 1px 1px 1px 1px solid;
+        margin-left: 250px;
+        border-radius: 30px;
+        background-color: whitesmoke;
+       position: relative;
+       bottom:85px;
+    }
+    #card6
+    {
+        width: 230px;
+        height: 110px;  
+        border: 1px 1px 1px 1px solid;
+        margin-left: 50px;
+        margin-top: 25px;
+        border-radius: 30px;
+        background-color: whitesmoke;
+        
+    }
+    #card7
+    {
+        width: 230px;
+        height: 110px; 
+        border: 1px 1px 1px 1px solid;
+        margin-left: 250px;
+        border-radius: 30px;
+        background-color: whitesmoke;
+        position: relative;
+        bottom:180px;
+        
+    }
+    #card8
+    {
+        width: 230px;
+        height: 110px; 
+        border: 1px 1px 1px 1px solid;
+        margin-left: 250px;
+        border-radius: 30px;
+        background-color: whitesmoke;
+        position: relative;
+        bottom: 117px;
+    
+    }
+
+   
+    </style>
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("one");
+    const graphContainer = document.getElementById("graphContainer");
+    const canvas = document.getElementById('myChart');
+    const ctx = canvas.getContext('2d');
+    const xValues = [23,29,58,75,33,20,73,49,22,56,35,22];
+            const yValues = [2, 2, 3, 4, 5, 4, 5,4,3,2,2,4];
+            
+            const chart = new Chart("myChart", {
+                type: "line",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        fill: true,
+                        lineTension: 0,
+                        backgroundColor: "rgba(62, 150, 228, 0.945)",
+                        borderColor: "rgba(0,0,255,0.1)",
+                        data: yValues
+                    }]
+                },
+                options: {
+                    plugins:{
+                        legend:{
+                            display:false
+                        }
+                    },
+                    legends:{
+                        display:false,
+                    },
+                    scales: {
+                        x:{
+                            ticks:{
+                                callback:(value,index,values)=>{
+                                    return xValues[index] + "%";
+                                }
+                            },
+                          grid:{
+                
+                            drawBorder:false,
+                            display:true,
+                            
+                          },
+                          
+                        },
+                        y: {
+                            display: false,
+                           beginAtZero: true,
+                        grid:{
+                            display:true,
+                        }
+                        }
+                    }
+                }
+            });
+    select.addEventListener("change", function () {
+        const value = select.value;
+        
+        if (value === "Rain precipitation") {
+            if (window.myChart) {
+                window.myChart.destroy();
+            }
+        }
+    });
+});
+function setProgressBarTo30() {
+  var progressBar = document.getElementById("myProgressBar");
+  progressBar.style.width = "30%";
+}
+
+setProgressBarTo30();
+
+function setProgressBar(percentage) {
+  var progressBar = document.getElementById("myProgressBar1");
+  progressBar.style.width = percentage + "%";
+}
+
+setProgressBar(42);
+function setProgressBarTo95() {
+  var progressBar = document.getElementById("myBar0");
+  progressBar.style.width = "100%";
+}
+
+setProgressBarTo95();
+function setProgressBarTo50() {
+var progressBar1 = document.getElementById("myBar1");
+  progressBar1.style.width = "50%";
+}
+setProgressBarTo50();
+function setProgressBarTo90() {
+  var progressBar = document.getElementById("myBar10");
+  progressBar.style.width = "100%";
+}
+
+
+setProgressBarTo90();
+function setProgressBarTo70(){
+var progressBar1 = document.getElementById("myBar11");
+  progressBar1.style.width = "70%";
+}
+setProgressBarTo70();
+function setProgressBarTo98() {
+  var progressBar = document.getElementById("myBar21");
+  progressBar.style.width = "100%";
+}
+setProgressBarTo98();
+function setProgressBarTo100() {
+  var progressBar = document.getElementById("myBar22");
+  progressBar.style.width = "100%";
+}
+setProgressBarTo100();
+function setProgressBarTo10() {
+  var progressBar = document.getElementById("myBar23");
+  progressBar.style.width = "40%";
+}
+setProgressBarTo10();
+ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    var myConfig = {
+      type: "gauge",
+      globals: {
+        fontSize: 25
+      },
+      plotarea: {
+        marginTop: 80
+      },
+      plot: {
+        size: '100%',
+        valueBox: {
+          placement: 'center',
+          text: '%v',
+          fontSize: 35,
+          rules: [{
+              rule: '%v >= 30',
+              text: '%v<br>Km/h'
+            },
+            {
+              rule: '%v < 30 && %v >= 25',
+              text: '%v<br>Km/h'
+            },
+            {
+              rule: '%v < 25 && %v >= 20',
+              text: '%v<br>Km/h'
+            },
+            {
+              rule: '%v < 20',
+              text: '%v<br>Km/h'
+            }
+          ]
+        }
+      },
+      tooltip: {
+        borderRadius: 5
+      },
+      scaleR: {
+        aperture: 180,
+        minValue: 0,
+        maxValue: 40,
+        step: 5, 
+        center: {
+          visible: false
+        },
+        tick: {
+          visible: false
+        },
+        item: {
+          offsetR: 0,
+          rules: [{
+            rule: '%i == 9',
+            offsetX: 15
+          }]
+        },
+        labels: ['0', '5', '15', '20', '25', '30','35','40'], 
+        ring: {
+          size: 30,
+          rules: [{
+              rule: '%v <= 20',
+              backgroundColor: '#29B6F6'
+            },
+            {
+              rule: '%v > 20 && %v < 25',
+              backgroundColor: '#29B6F6'
+            },
+            {
+              rule: '%v >= 25 && %v < 30',
+              backgroundColor: '#29B6F6'
+            },
+            {
+              rule: '%v >= 30',
+              backgroundColor: '#29B6F6'
+            }
+          ]
+        }
+      },
+      series: [{
+        values: [8], 
+        backgroundColor: 'black',
+        indicator: [10, 10, 10, 10, 0.75],
+        animation: {
+          effect: 2,
+          method: 1,
+          sequence: 4,
+          speed: 900
+        },
+      }]
+    };
+ 
+    zingchart.render({
+      id: 'myChart1',
+      data: myConfig,
+      height: 500,
+      width: '100%'
+    });
+    function formatTime(date) {
+      return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+    const latitude = 40.7128;
+    const longitude =-74.0060;
+    const today = new Date();
+    const times = SunCalc.getTimes(today, latitude, longitude);
+    const sunsetTime = times.sunset;
+    const sunriseTime = times.sunrise;
+    const sunsetElement = document.getElementById('sunset');
+    sunsetElement.textContent = ` New York, USA       ${formatTime(sunsetTime)}`;
+
+    const sunriseElement = document.getElementById('sunrise');
+    sunriseElement.textContent = ` Today 28 Sept    ${formatTime(sunriseTime)}`;
+        </script>
+</body>
+</html>
